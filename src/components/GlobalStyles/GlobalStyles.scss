@@ -1,0 +1,18 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #ed1b24;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    //Tối ưu tốc độ hiển thị phông chữ
+    text-rendering: optimizeSpeed;
+}
