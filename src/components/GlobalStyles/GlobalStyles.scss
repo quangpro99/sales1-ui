@@ -3,9 +3,14 @@
 
 :root {
     --primary: #ed1b24;
+    //Default Layout
+    --default-layout-header-height: 56px;
+    --default-layout-width: 1200px;
 }
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
