@@ -1,11 +1,16 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family="Open Sans",Arial,sans-serif:wght@300;400;500;600;700&display=swap');
 
 :root {
     --primary: #ed1b24;
+    --white: #fff;
+    --text-color: #333;
+    --hover-button-color: #da0d15;
+    --active-button-color: #cf0b14;
     //Default Layout
     --default-layout-header-height: 56px;
     --default-layout-width: 1200px;
+    --color-input: #757575;
 }
 * {
     box-sizing: border-box;
@@ -18,9 +23,21 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     font-size: 1.6rem;
     line-height: 1.2;
     //Tối ưu tốc độ hiển thị phông chữ
     text-rendering: optimizeSpeed;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }

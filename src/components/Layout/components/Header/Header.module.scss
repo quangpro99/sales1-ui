@@ -1,4 +1,8 @@
 .wrapper {
+    --search-border-radius: 99px;
+    --seach-height: 31px;
+    --search-button-width: 55px;
+
     width: 100%;
     height: var(--default-layout-header-height, 56px);
     display: flex;
@@ -8,4 +12,70 @@
 .inner {
     height: 100%;
     width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+}
+
+.search,
+.search-results {
+    width: 593px;
+}
+
+.search {
+    position: relative;
+    height: var(--seach-height);
+    border-radius: var(--search-border-radius);
+    padding-left: 20px;
+    display: flex;
+    border: 1px solid var(--primary);
+
+    input {
+        flex: 1;
+        color: var(--color-input);
+        font-size: 1.2rem;
+        height: 100%;
+        //trong suốt
+        background-color: transparent;
+        //màu nháy ô input
+        caret-color: var(--primary);
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: #333;
+    }
+    &:focus-within {
+        border: 1px solid var(--hover-button-color);
+    }
+}
+
+.clear,
+.loading {
+    position: absolute;
+    right: calc(var(--search-button-width) + 14px);
+    //căn giữa
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-input);
+}
+
+.search-btn {
+    width: var(--search-button-width);
+    height: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    border-top-right-radius: var(--search-border-radius);
+    border-bottom-right-radius: var(--search-border-radius);
+
+    &:hover {
+        cursor: pointer;
+        background-color: var(--hover-button-color);
+    }
+
+    &:active {
+        background-color: var(--active-button-color);
+    }
 }
